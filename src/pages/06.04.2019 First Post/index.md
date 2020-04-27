@@ -1,10 +1,8 @@
 ---
-path: '/post-one'
-data: '06-04-2020'
-title: 'My first Gatsby post!'
-author: 'Adam Kniec'
+path: "/post-one"
+date: "06-04-2020"
+title: "My first Gatsby post!"
+author: "Adam Kniec"
 ---
 
 Oto mój pierwszy post w **Gatsbym** :)
-
-

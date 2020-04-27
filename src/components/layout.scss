@@ -1,0 +1,105 @@
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-weight: bold;
+}
+html {
+  font-family: sans-serif;
+
+  body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Roboto;
+    .header {
+      background-color: #306844;
+      background-image: linear-gradient(314deg, #306844 0%, #2c4c3b 74%);
+      .header-intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        justify-content: space-evenly;
+        margin-top: -60px;
+        .intro-container {
+          width: 500px;
+          .intro-text-decorator {
+            position: relative;
+            z-index: 2;
+            &::before {
+              content: "";
+              width: 65px;
+              height: 18px;
+              background-color: #292727;
+              position: absolute;
+              z-index: -1;
+              // padding: 3px;
+              top: -5px;
+              left: 10px;
+            }
+          }
+          // intro text decorator bottom helper
+          // Trzeba to inaczej rozwiazac
+          .bottom {
+            position: relative;
+            z-index: 2;
+            &::before {
+              content: "";
+              width: 240px;
+              height: 20px;
+              left: -20px;
+              top: -8px;
+              background-color: #292727;
+            }
+          }
+          .tech-icons-container {
+            svg {
+              height: 20px;
+              width: 20px;
+              padding: 10px;
+            }
+          }
+        }
+      }
+    }
+    .wrapping-section {
+      background-color: #306844;
+      background-image: linear-gradient(314deg, #306844 0%, #2c4c3b 74%);
+      height: 100vh;
+    }
+    .articles {
+      display: grid;
+      grid-gap: 1rem;
+      justify-content: center;
+      grid-template-columns: 250px 250px 250px;
+    }
+  }
+}
+
+.white-circle {
+  animation: wheel 2s ease infinite;
+  transform-origin: top;
+  transform-box: fill-box;
+  transform: translateZ(0);
+}
+
+@keyframes wheel {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.phone {
+  animation: bounce 1s infinite alternate;
+  transform: translateZ(0);
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-25px);
+  }
+}

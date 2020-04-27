@@ -1,21 +1,21 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Nav } from "./styled/Nav"
+import { List } from "./styled/List"
+import { ListItem } from "./styled/ListItem"
+import { StyledLink } from "./styled/LinkItem"
 
 const Navbar = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/blog">Blog</Link>
-        </li>
-      </ul>
-    </nav>
+    <Nav>
+      <List>
+        <ListItem>
+          <StyledLink to="/">Home</StyledLink>
+        </ListItem>
+        <ListItem>
+          <StyledLink to="/blog">Blog</StyledLink>
+        </ListItem>
+      </List>
+    </Nav>
   )
 }
 

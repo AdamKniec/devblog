@@ -9,26 +9,34 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Navbar from "./navbar"
-import "./layout.css"
+import "./layout.scss"
 
 const Layout = ({ children }) => {
+  const renderProperSection = () => {
+    if (window.location.pathname === "/") {
+      return (
+        <header className="header">
+          <Navbar />
+          {children}
+        </header>
+      )
+    } else {
+      return (
+        <section className="wrapping-section">
+          <Navbar />
+          {children}
+        </section>
+      )
+    }
+  }
   return (
     <>
-      <Navbar />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        {/* <footer>
+      <main>{renderProperSection()}</main>
+      {/* <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer> */}
-      </div>
     </>
   )
 }
